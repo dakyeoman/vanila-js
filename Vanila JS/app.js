@@ -81,7 +81,7 @@ const calculator = {
         return a ** b;
     },
     times: function (a, b){
-        return a * b;
+        return a * b; //return finishes function//
     }
 }
 
@@ -97,8 +97,34 @@ function calculateKrAge(ageOfForeigner){
 const krAge = calculateKrAge(age);
 console.log(krAge);
 
-const plusResult2 = calculator.plus(2, 3);
-const minusResult = calculator.minus(plusResult2, 10);
-const timesResult = calculator.times(10, minusResult);
-const divideResult = calculator.divide(timesResult, plusResult);
+const plusResult2 = calculator.plus(2, 3); //5//
+const minusResult = calculator.minus(plusResult2, 10); //-5//
+const timesResult = calculator.times(10, minusResult); //-50//
+const divideResult = calculator.divide(timesResult, plusResult); //
 const powerResult = calculator.power(divideResult, minusResult)
+//console.log - shows result in console, returning nothing//
+//return - can get the value on the code, out of the function//
+
+
+//Conditionals: if & Else//
+//prompt ask to user.//
+const playerAge = prompt("How old are you?"); //JS waiting for us. so we don't use it anymore//
+//parseInt: string -> number, NaN: not a number//
+console.log(typeof "15", typeof parseInt("15"), parseInt("strings"));
+
+const userAge = parseInt(prompt("How old?"));
+//console.log(isNaN(playerAge)); isNaN returns boolean//
+
+if(isNaN(userAge) || userAge < 0){ //condition should be boolean//
+    console.log("Write positive numbers!!!");
+} else if(userAge < 18) {
+    console.log("You are too young");
+} else if(userAge >= 18 && userAge <= 50) { 
+    // && : true & true//
+    // || : or = one of them true > true //
+    console.log("You can drink!");
+} else if(userAge > 50 && age <=80) {
+    console.log("Seriously?");
+} else {
+    console.log("Stop drinking!!!")
+}
