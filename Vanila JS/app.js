@@ -106,25 +106,74 @@ const powerResult = calculator.power(divideResult, minusResult)
 //return - can get the value on the code, out of the function//
 
 
+
+
+/* IF Drink 
+
 //Conditionals: if & Else//
 //prompt ask to user.//
-const playerAge = prompt("How old are you?"); //JS waiting for us. so we don't use it anymore//
+const playerAge = prompt("How old are you?"); 
+//JS waiting for us. so we don't use it anymore//
 //parseInt: string -> number, NaN: not a number//
 console.log(typeof "15", typeof parseInt("15"), parseInt("strings"));
 
 const userAge = parseInt(prompt("How old?"));
 //console.log(isNaN(playerAge)); isNaN returns boolean//
 
-if(isNaN(userAge) || userAge < 0){ //condition should be boolean//
+
+
+if(isNaN(userAge) || userAge < 0){ 
+    //condition should be boolean//
+    // && : true & true//
+    // || : or = one of them true > true //
     console.log("Write positive numbers!!!");
 } else if(userAge < 18) {
     console.log("You are too young");
 } else if(userAge >= 18 && userAge <= 50) { 
-    // && : true & true//
-    // || : or = one of them true > true //
     console.log("You can drink!");
 } else if(userAge > 50 && age <=80) {
     console.log("Seriously?");
-} else {
+} eslse {
     console.log("Stop drinking!!!")
 }
+
+*/
+
+
+
+
+/*#3. JS reading HTML, already connected w/ HTML
+const title = document.getElementById("title");
+//getElementById will find element on HTML by ID//
+//we can change & get things in HTML by JS//
+
+title.innerText ="Got you!";
+console.log(title.id);
+console.log(title.className);
+
+/*
+
+const hellos = document.getElementsByClassName("hello");
+console.log(hellos);  
+-> hellos = array which has many <h1> */
+
+
+/*
+#title =/= title object, title = array so It's not what i want
+
+const title = document.getElementsByTagName("h1");
+console.log(title); 
+*/
+
+// #querySelector search for element using CSS notation - can get h1 in the class "hello" //
+const title = document.querySelector(".hello h1"); //Need "" inside ()//
+//it can be ".hello h1:first-child"
+console.log(title); 
+title.innerText = "HEEEEEEEEEEY"
+//querySelector returns only 1 element. eventhough there is many selector//
+
+
+// querySelectorAll returns all element that match, but it gives me array //
+const titleAll = document.querySelectorAll(".hello h1"); 
+console.log(titleAll); 
+
