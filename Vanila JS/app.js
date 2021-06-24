@@ -1,3 +1,37 @@
+const h1 = document.querySelector("div.hello:first-child h1");
+
+
+function handleTitleClick() {
+    h1.className = "active";
+    console.log(h1.className);
+
+}
+
+h1.addEventListener("click", handleTitleClick);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const a = 5;
 const b = 2;
 let myName = "nico";
@@ -37,7 +71,7 @@ const player = {
 console.log(player.name);
 console.log(player["points"]);
 
-
+ 
 player.cute = false;
 console.log(player.cute)
 
@@ -151,7 +185,7 @@ title.innerText ="Got you!";
 console.log(title.id);
 console.log(title.className);
 
-/*
+/* 
 
 const hellos = document.getElementsByClassName("hello");
 console.log(hellos);  
@@ -165,6 +199,7 @@ const title = document.getElementsByTagName("h1");
 console.log(title); 
 */
 
+/*
 // #querySelector search for element using CSS notation - can get h1 in the class "hello" //
 const title = document.querySelector(".hello h1"); //Need "" inside ()//
 //it can be ".hello h1:first-child"
@@ -176,4 +211,20 @@ title.innerText = "HEEEEEEEEEEY"
 // querySelectorAll returns all element that match, but it gives me array //
 const titleAll = document.querySelectorAll(".hello h1"); 
 console.log(titleAll); 
+*/
 
+
+/*
+const h1 = document.querySelector("div.hello:first-child h1")
+
+function handleTitleClick() {
+    const currentColor = h1.style.color;
+    let newColor;
+    if(h1.currentColor === "blue"){
+        newColor = "tomato";
+    } else {
+        newColor = "blue";
+    }
+}
+h1.addEventListener("click", handleTitleClick);
+*/
