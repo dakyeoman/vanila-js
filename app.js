@@ -47,9 +47,22 @@ const calcualator = {
         return a / b ;
     },
 };
-
 const plusResult = calcualator.add(1, 2);
-calcualator.minus(1, 2);
-calcualator.multiply(1, 2);
-calcualator.square(1, 2);
-calcualator.divide(1, 2);
+
+
+//const age = prompt("How old are you?");
+
+//"15" => 15
+const age = parseInt(prompt("How old are you?"));
+console.log(isNaN(age));
+
+if(isNaN(age)){
+    console.log("Please write number");
+} else {
+    console.log("Thanks.")
+}
+
+
+
+
+
