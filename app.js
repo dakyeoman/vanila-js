@@ -1,3 +1,14 @@
+const title = document.getElementsByTagName("h1");
+console.log(title)
+
+
+
+
+
+
+
+
+/*
 const a = 5;
 const b = 2;
 let myName = "DK"; 
@@ -58,11 +69,15 @@ console.log(isNaN(age));
 
 if(isNaN(age)){
     console.log("Please write number");
+} else if (age < 10){
+    console.log("Too young.");
+} else if (age > 80) {
+    console.log("Too old.");
 } else {
-    console.log("Thanks.")
+    console.log("Pass")
 }
 
-
+*/
 
 
 
